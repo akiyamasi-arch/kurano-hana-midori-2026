@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>倉農ミニ庭園｜花と緑のフェア2026</title>
+<meta name="description" content="鳥取県立倉吉農業高校の生徒が「花と緑のフェア」（東郷湖羽合臨海公園 ハワイ夢広場）で展示するミニ庭園の特設サイト。制作のタイムラプスや紹介動画を公開します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f5ec; --paper:#ffffff; --ink:#24321f; --sub:#5d6b55;
+  --green:#2f7d3b; --green-d:#1f5a2a; --leaf:#8cc36a; --pink:#e9738f; --sun:#f2b84b;
+  --line:#dfe6d3;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;line-height:1.75;-webkit-text-size-adjust:100%}
+img{max-width:100%}
+a{color:var(--green-d)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+/* ---- ヒーロー ---- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(170deg,#3d8f45 0%,#2f7d3b 55%,#1f5a2a 100%);color:#fff;padding:44px 0 88px;text-align:center}
+.hero .badge{display:inline-block;background:#fff;color:var(--green-d);font-weight:700;font-size:.85rem;padding:4px 14px;border-radius:999px;letter-spacing:.05em}
+.hero h1{font-size:clamp(2rem,8vw,3.2rem);line-height:1.25;margin:18px 0 10px;font-weight:900;letter-spacing:.02em}
+.hero h1 small{display:block;font-size:.42em;font-weight:700;opacity:.92;letter-spacing:.12em}
+.hero p.lead{margin:0 auto;max-width:30em;font-size:1.02rem;opacity:.95}
+.hero .date{display:inline-flex;gap:10px;align-items:baseline;margin-top:22px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:8px 18px;border-radius:14px;font-weight:700}
+.hero .date b{font-size:1.6rem;color:#ffe9a8}
+.flowers{position:absolute;inset:auto 0 0 0;height:70px;pointer-events:none}
+.flowers svg{width:100%;height:100%;display:block}
+.petal{position:absolute;width:10px;height:10px;border-radius:60% 0 60% 0;background:#ffc6d3;opacity:.8;animation:fall linear infinite}
+@keyframes fall{from{transform:translateY(-20px) rotate(0)}to{transform:translateY(420px) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.petal{display:none}}
+
+/* ---- ナビ ---- */
+nav.jump{position:sticky;top:0;z-index:5;background:rgba(247,245,236,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.jump ul{display:flex;gap:6px;list-style:none;margin:0 auto;padding:8px 16px;max-width:760px;overflow-x:auto}
+nav.jump a{display:block;white-space:nowrap;text-decoration:none;font-weight:700;font-size:.9rem;color:var(--green-d);padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+
+section{padding:40px 0 8px}
+h2{font-size:1.45rem;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+h2::before{content:"";width:22px;height:22px;flex:none;background:var(--leaf);border-radius:0 70% 0 70%;transform:rotate(-10deg)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 2px 0 rgba(47,125,59,.06)}
+
+/* ---- 動画 ---- */
+.videos{display:grid;gap:20px}
+.video .head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.video .tag{font-size:.78rem;font-weight:700;color:#fff;background:var(--pink);padding:2px 10px;border-radius:999px}
+.video .tag.tl{background:var(--sun);color:#3d2c00}
+.video h3{margin:0;font-size:1.12rem}
+.video p{margin:10px 0 0;color:var(--sub);font-size:.95rem}
+.frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#e8efe0}
+.frame.short{aspect-ratio:9/16;max-width:360px;margin:0 auto}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.soon{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;color:var(--green-d);background:repeating-linear-gradient(135deg,#eef4e6 0 14px,#e6eedb 14px 28px)}
+.soon strong{font-size:1.15rem}
+.soon span{font-size:.85rem;color:var(--sub)}
+.sprout{width:54px;height:54px}
+.sprout .stem{transform-origin:27px 50px;animation:grow 2.4s ease-in-out infinite alternate}
+@keyframes grow{from{transform:scaleY(.55)}to{transform:scaleY(1)}}
+
+/* ---- 庭園紹介 ---- */
+.points{display:grid;gap:12px;margin-top:16px;padding:0;list-style:none}
+.points li{display:flex;gap:12px;align-items:flex-start;background:#f3f8ee;border-radius:12px;padding:12px 14px}
+.points .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;display:grid;place-items:center;font-size:.9rem}
+.todo{color:#9a6b00;background:#fff6dc;border:1px dashed #e6c46a;border-radius:8px;padding:2px 6px;font-size:.85em}
+
+/* ---- イベント ---- */
+dl.info{margin:0;display:grid;grid-template-columns:5.5em 1fr;gap:10px 12px}
+dl.info dt{font-weight:700;color:var(--green-d)}
+dl.info dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none}
+.chips li{background:#f3f8ee;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:.88rem}
+.chips li.us{background:var(--green);color:#fff;border-color:var(--green);font-weight:700}
+.btn{display:inline-block;margin-top:16px;background:var(--green);color:#fff;text-decoration:none;font-weight:700;padding:10px 20px;border-radius:999px}
+
+footer{margin-top:48px;background:var(--green-d);color:#e8f2df;text-align:center;padding:28px 16px;font-size:.9rem}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">鳥取県立倉吉農業高校</span>
+    <h1><small>花と緑のフェア 2026</small>倉農ミニ庭園</h1>
+    <p class="lead">生徒たちが設計から施工まで手がけたミニ庭園を展示します。<br>制作のようすを動画でお届けします。</p>
+    <div class="date"><span>2026年</span><b>10/17</b><span>（土）10:00〜15:30</span></div>
+  </div>
+  <div class="flowers" aria-hidden="true">
+    <svg viewBox="0 0 400 70" preserveAspectRatio="none"><path d="M0 40 Q50 20 100 38 T200 36 T300 40 T400 34 V70 H0Z" fill="#f7f5ec"/></svg>
+  </div>
+</header>
+
+<nav class="jump" aria-label="ページ内リンク">
+  <ul>
+    <li><a href="#movie">動画</a></li>
+    <li><a href="#garden">ミニ庭園について</a></li>
+    <li><a href="#event">イベント情報</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <section id="movie">
+    <h2>動画で見る ミニ庭園</h2>
+    <div class="videos" id="videos"></div>
+  </section>
+
+  <section id="garden">
+    <h2>ミニ庭園について</h2>
+    <div class="card">
+      <p style="margin-top:0">倉吉農業高校の生徒が、植物の選定・デザイン・施工までを自分たちで行ったミニ庭園です。会場で実物をご覧いただきながら、動画で制作の過程もお楽しみください。</p>
+      <!-- ▼ 庭園のテーマ・見どころが決まったら書きかえてください -->
+      <ul class="points">
+        <li><span class="n">1</span><div><b>テーマ</b><br><span class="todo">（準備中）庭園のテーマ・コンセプト</span></div></li>
+        <li><span class="n">2</span><div><b>見どころ</b><br><span class="todo">（準備中）使った植物・こだわりのポイント</span></div></li>
+        <li><span class="n">3</span><div><b>制作したメンバー</b><br><span class="todo">（準備中）学科・学年・人数など</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="event">
+    <h2>イベント情報</h2>
+    <div class="card">
+      <dl class="info">
+        <dt>イベント</dt><dd>花と緑のフェア</dd>
+        <dt>日時</dt><dd>2026年10月17日（土）10:00〜15:30</dd>
+        <dt>会場</dt><dd>東郷湖羽合臨海公園 ハワイ夢広場<br>（鳥取県東伯郡湯梨浜町）</dd>
+        <dt>入場</dt><dd>無料（一部有料コーナーあり）</dd>
+        <dt>主催</dt><dd>花と緑のフェア実行委員会</dd>
+      </dl>
+      <ul class="chips" aria-label="主な催し">
+        <li class="us">ミニ庭園展示（倉吉農業高校）</li>
+        <li>秋の花の寄せ植え教室</li>
+        <li>花と緑のクイズラリー</li>
+        <li>はたらく車の体験・展示</li>
+        <li>ワークショップ</li>
+        <li>キッズコーナー</li>
+        <li>キッチンカー</li>
+      </ul>
+      <a class="btn" href="https://www.instagram.com/p/DeO5NFDH4mg/" target="_blank" rel="noopener">イベントの詳細（Instagram）</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div>鳥取県立倉吉農業高等学校</div>
+  <div style="opacity:.8;margin-top:4px">花と緑のフェア 2026 出展</div>
+</footer>
+
+<script>
+/* ============================================================
+   ▼ 動画の設定（ここだけ書きかえればOK）
+   youtube : YouTubeのURL か 動画ID を入れる。空欄 "" のあいだは「準備中」と表示。
+             例） "https://youtu.be/AbCdEfGhIjk"
+                  "https://www.youtube.com/shorts/AbCdEfGhIjk"
+   short   : ショート動画（縦長）なら true
+   ============================================================ */
+const VIDEOS = [
+  {
+    tag: "タイムラプス", tagClass: "tl",
+    title: "ミニ庭園ができるまで",
+    text: "設計から植え付け・仕上げまでの作業をタイムラプスで。",
+    youtube: "",
+    short: false
+  },
+  {
+    tag: "紹介動画", tagClass: "",
+    title: "生徒が語る ミニ庭園の見どころ",
+    text: "テーマやこだわったポイントを生徒が紹介します。",
+    youtube: "",
+    short: false
+  }
+];
+
+function youtubeId(s){
+  if(!s) return "";
+  s = s.trim();
+  if(/^[\w-]{11}$/.test(s)) return s;
+  const m = s.match(/(?:youtu\.be\/|v=|shorts\/|embed\/|live\/)([\w-]{11})/);
+  return m ? m[1] : "";
+}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+
+const sprout = `<svg class="sprout" viewBox="0 0 54 54" aria-hidden="true">
+  <path d="M8 50h38" stroke="#8b6a3e" stroke-width="4" stroke-linecap="round"/>
+  <g class="stem"><path d="M27 50V24" stroke="#2f7d3b" stroke-width="3" stroke-linecap="round"/>
+  <path d="M27 30C17 30 13 22 13 16c8 0 14 4 14 14z" fill="#8cc36a"/>
+  <path d="M27 26c0-9 6-14 15-14 0 8-5 14-15 14z" fill="#5aa64a"/></g></svg>`;
+
+document.getElementById("videos").innerHTML = VIDEOS.map(v=>{
+  const id = youtubeId(v.youtube);
+  const body = id
+    ? `<iframe src="https://www.youtube-nocookie.com/embed/${id}?rel=0&playsinline=1" title="${esc(v.title)}" loading="lazy"
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    : `<div class="soon">${sprout}<strong>ただいま制作中</strong><span>完成しだい、ここで公開します</span></div>`;
+  return `<article class="card video">
+    <div class="head"><span class="tag ${v.tagClass}">${esc(v.tag)}</span><h3>${esc(v.title)}</h3></div>
+    <div class="frame${v.short?" short":""}">${body}</div>
+    <p>${esc(v.text)}</p>
+  </article>`;
+}).join("");
+
+/* 花びら演出 */
+(function(){
+  const hero = document.querySelector(".hero");
+  const colors = ["#ffc6d3","#ffe08a","#ffffff","#f7a8bb"];
+  for(let i=0;i<14;i++){
+    const p = document.createElement("span");
+    p.className = "petal";
+    p.style.left = Math.random()*100+"%";
+    p.style.top = (-20 - Math.random()*60)+"px";
+    p.style.background = colors[i%colors.length];
+    p.style.animationDuration = (6+Math.random()*6)+"s";
+    p.style.animationDelay = (-Math.random()*10)+"s";
+    hero.appendChild(p);
+  }
+})();
+</script>
+</body>
+</html>
