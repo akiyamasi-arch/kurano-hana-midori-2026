@@ -50,6 +50,7 @@ h2::before{content:"";width:22px;height:22px;flex:none;background:var(--leaf);bo
 .video .head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .video .tag{font-size:.78rem;font-weight:700;color:#fff;background:var(--pink);padding:2px 10px;border-radius:999px}
 .video .tag.tl{background:var(--sun);color:#3d2c00}
+.video .tag.iv{background:var(--green)}
 .video h3{margin:0;font-size:1.12rem}
 .video p{margin:10px 0 0;color:var(--sub);font-size:.95rem}
 .frame{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#e8efe0}
@@ -66,6 +67,17 @@ h2::before{content:"";width:22px;height:22px;flex:none;background:var(--leaf);bo
 .points{display:grid;gap:12px;margin-top:16px;padding:0;list-style:none}
 .points li{display:flex;gap:12px;align-items:flex-start;background:#f3f8ee;border-radius:12px;padding:12px 14px}
 .points .n{flex:none;width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:900;display:grid;place-items:center;font-size:.9rem}
+.hero-ph{margin:-20px -20px 16px;border-radius:18px 18px 0 0;overflow:hidden}
+.hero-ph img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.theme-lab{margin:0;font-size:.78rem;font-weight:700;letter-spacing:.2em;color:var(--pink)}
+.theme{margin:2px 0 8px;font-size:1.35rem;font-weight:900;color:var(--green-d);line-height:1.5}
+.sub-h{margin:24px 0 12px;font-size:1.15rem;color:var(--green-d)}
+.spots{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:600px){.spots{grid-template-columns:1fr 1fr}}
+.spot{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.spot img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.spot figcaption{padding:12px 14px 14px;font-size:.92rem;color:var(--sub)}
+.spot figcaption b{display:block;color:var(--ink);font-size:1.02rem;margin-bottom:2px}
 .todo{color:#9a6b00;background:#fff6dc;border:1px dashed #e6c46a;border-radius:8px;padding:2px 6px;font-size:.85em}
 
 /* ---- イベント ---- */
@@ -113,13 +125,26 @@ footer a{color:#fff}
   <section id="garden">
     <h2>ミニ庭園について</h2>
     <div class="card">
-      <p style="margin-top:0">倉吉農業高校の生徒が、植物の選定・デザイン・施工までを自分たちで行ったミニ庭園です。会場で実物をご覧いただきながら、動画で制作の過程もお楽しみください。</p>
-      <!-- ▼ 庭園のテーマ・見どころが決まったら書きかえてください -->
-      <ul class="points">
-        <li><span class="n">1</span><div><b>テーマ</b><br><span class="todo">（準備中）庭園のテーマ・コンセプト</span></div></li>
-        <li><span class="n">2</span><div><b>見どころ</b><br><span class="todo">（準備中）使った植物・こだわりのポイント</span></div></li>
-        <li><span class="n">3</span><div><b>制作したメンバー</b><br><span class="todo">（準備中）学科・学年・人数など</span></div></li>
-      </ul>
+      <figure class="hero-ph"><img src="img/zenkei.jpg" alt="完成したミニ庭園の全景。左に芝生と円形花壇、右に白砂利と飛び石の和風の庭" loading="lazy"></figure>
+      <p class="theme-lab">THEME</p>
+      <p class="theme">和洋折衷（わようせっちゅう）</p>
+      <p><b>和のシンプルさ</b>と<b>洋風のかわいらしさ</b>を組み合わせて作りました。芝生と花壇の洋風エリアから、石の小道をたどっていくと、白砂利に飛び石が浮かぶ和風エリアへ。ひとつの庭の中で、ふたつの景色を楽しめます。</p>
+    </div>
+
+    <h3 class="sub-h">見どころ</h3>
+    <div class="spots">
+      <figure class="spot"><img src="img/kadan.jpg" alt="石で縁取った円形の花壇" loading="lazy">
+        <figcaption><b>まんまるの花壇</b>石でぐるりと縁取った花壇に、色とりどりの秋の花を植えました。星形にくりぬいたオブジェや、うさぎの置物もかくれています。</figcaption></figure>
+      <figure class="spot"><img src="img/kutsu.jpg" alt="登山靴に花を植えたプランター" loading="lazy">
+        <figcaption><b>くつのプランター</b>使い込んだ登山靴に花を植えて、石畳の上にちょこんと。遊び心のあるポイントです。</figcaption></figure>
+      <figure class="spot"><img src="img/komichi.jpg" alt="板石と乱張りの石でつくった小道" loading="lazy">
+        <figcaption><b>ふたつの庭をつなぐ小道</b>大きな板石のすき間に、割った石を一枚ずつ敷きつめました。洋風から和風へ、景色が切りかわる場所です。</figcaption></figure>
+      <figure class="spot"><img src="img/wafuu.jpg" alt="白砂利に飛び石、石橋、石灯籠のある和風の庭" loading="lazy">
+        <figcaption><b>白砂利と飛び石</b>白い砂利に丸い飛び石を並べ、石の橋と石灯籠、竹垣で和の雰囲気に仕上げました。</figcaption></figure>
+    </div>
+
+    <div class="card" style="margin-top:16px">
+      <p style="margin:0"><b>制作</b>　鳥取県立倉吉農業高等学校<br>3年 環境科 フラワーガーデンコース 7名</p>
     </div>
   </section>
 
@@ -174,6 +199,13 @@ const VIDEOS = [
     title: "作業のあいまに",
     text: "ミニ庭園チームの、ちょっと素顔な1日。",
     youtube: "https://youtu.be/p46bgaCOfQE",
+    short: false
+  },
+  {
+    tag: "インタビュー", tagClass: "iv",
+    title: "生徒が語る ミニ庭園の見どころ",
+    text: "テーマ「和洋折衷」にこめた思いを、制作した生徒が紹介します。",
+    youtube: "",
     short: false
   }
 ];
